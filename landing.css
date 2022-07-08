@@ -336,11 +336,14 @@ body, html {
 	padding: 130px 0px 120px 0px;
 }
 
-.who-we-are__left-column {
+.who-we-are__column {
 	justify-content: center;
-	flex: 0 0 33.33%
+	flex: 0 0 287px;
+	text-align: left;	
 }
-.left-column__title {
+
+.column__title {
+	margin-bottom: 36px;
 	font-size: 18.7px;
 	line-height: 33px;
 	font-weight: 700;
@@ -348,16 +351,19 @@ body, html {
 	color: #ffffff;
 }
 
-.left-column__text {
+.column__text {
+	font-size: 16.7px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #ffffff;
 }
-.who-we-are__center-column {
+.who-we-are__column {
 }
 .center-column__title {
 }
 .center-column__text {
 }
-.who-we-are__right-column {
-}
+
 .right-column__title {
 }
 .right-column__text {
