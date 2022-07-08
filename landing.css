@@ -1,0 +1,370 @@
+/*============================Обнуление============================*/
+*,
+*::before,
+*::after {
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style-type: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+body, html {
+	height: 100%;
+	line-height: 1;
+	font-size: 16px;
+	color: #ffffff;
+	font-family: 'Raleway';
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/*===============================================================*/
+
+/*Оболочка всего сайта===========================================*/
+._container {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0px 15px 0px;
+	box-sizing: content-box;	
+}
+._container-bg {
+	max-width: 100%;
+}
+
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	object-fit: cover;
+}
+
+/* ============================================================= */
+/*================Шапка==================================*/
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 45px;
+	z-index: 50;
+	margin: 0 auto;
+}
+.header__container {
+	display: flex;
+	min-height: 55px;
+	align-items: center;
+	width: 1160px;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.header__logo {
+	position: relative;
+	margin-left: 130px;
+}
+@media (max-width: 767px) {
+	.header__logo {
+		margin: 0 0 0 50px;	
+	}
+}
+@media (max-width: 479px) {
+	.header__logo {
+		margin: 0 0 0 0px;	
+		transform: scale(0.6);	
+	}
+}
+
+.header-logo__title {
+	font-size: 26.2px;
+	line-height: calc(26.2 / 16 * 100%);
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: inherit;
+	
+}
+.header-logo__title span{
+	font-weight: 800;
+	color: #3ea2d8;
+}
+.header-logo__title::before {
+	content: url(../img/icon.png);
+	position: absolute;
+	top: 8px;
+	left: -37px;
+	width: 37px;
+	height: 37px;
+}
+.header-logo__subtitle {
+	font-size: 9.4px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	color: #ffffff;
+}
+.header__menu {
+	margin: 0 0 0 450px;	
+}
+@media (max-width: 1191px) {
+	.header__menu {
+		margin: 0 0 0 350px;	
+	}
+}
+@media (max-width: 1024px) {
+	.header__menu {
+		margin: 0 0 0 200px;	
+	}
+}
+ @media (max-width: 767px) {
+	.header__menu {
+		margin: 0 0 0 100px;	
+	}
+} 
+@media (max-width: 479px) {
+	.header__menu {
+		margin: 0 0 0 -30px;	
+		transform: scale(0.6);	
+	}
+}
+
+.menu {
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.menu__item {
+	
+}
+.menu__item:not(:last-child) {
+	margin: 0 40px 0 0px;
+}
+.menu__link {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 19.2px;
+	line-height: calc(19.2 / 16 * 100%);
+	font-weight: 500;
+}
+@media (max-width: 479px) {
+	.menu__link {
+		font-size: 18px;	
+	}
+}
+.menu__link--blue {
+	color: #3ea2d8;
+}
+
+/*===========================================================*/
+
+/*==================page=====================================*/
+.page {
+	flex: 1 1 auto;
+	color: #000000;
+}
+.page__main-block {
+}
+/*===========================================================*/
+
+
+/*==============Главная======================================*/
+
+.main-block {
+	position: relative;
+}
+.main-block__container {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+}
+._container-bg {
+	background-color: rgba(40, 207, 219, 0.295);
+}
+.main-block__body {
+	padding: 391px 0px 164px 0px;
+	max-width: 798px;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	.main-block__body {
+		padding: 250px 0px 82px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 600px;
+	}
+}
+.main-block__body > *:not(:last-child) { /*Свойство применяется в случае изменения контента, верстка не полетит и отступ всегда будет на месте, применен к первоуровневым блочным объектам внутри коробки  .main-block__body с любым тегом*/
+	margin: 0px 0px 80px 0px; 
+	
+}
+.main-block__title {
+	font-family: 'Raleway';
+	font-size: 175.2px;
+	line-height: 1.2;
+	font-weight: 900;
+	color: rgba(255, 255, 255, 0);
+	text-transform: uppercase;
+	text-shadow: 2px solid #f6f6f6;
+}
+@media (max-width: 479px) {
+	.main-block__title {
+			
+		transform: scale(0.6);	
+	}
+}
+	
+.main-block__title:before { /* второй слой */
+	content: attr(data-text);
+	position: absolute; /* в том же месте той же ширины */
+	left: 0;
+	right: 0;
+	-webkit-text-stroke: 2px #f6f6f6;
+}
+
+.main-text {
+	font-family: 'Raleway';
+	font-size: 21.8px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffffff;
+}
+@media (max-width: 767px) {
+	.main-text  {
+		font-size: 16px;
+		line-height: 1;	
+		max-width: 500px;
+	}
+} 
+.main-block__botton {
+	display: flex;
+	justify-content: center;
+	
+}
+.main-block__btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	line-height: 1.2;
+	min-height: 53px;
+	padding: 5px 60px;
+}
+.btn {
+	font-family: 'Roboto';
+	font-weight: 700;
+	color: #3ea2d8;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 24px;
+}
+.main-block__img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;	
+}
+@media (max-width: 1190px) {
+	.main-block__img img {
+		max-width: 100%;
+	}
+}
+.page__who-we-are__top {
+	background-color: #000000;
+}
+.who-we-are__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 890px;
+	padding: 160px 0;
+	text-align: center;
+	
+}
+.who-we-are__titel:not(:last-child) {
+	margin: 0px 0px 45px 0px;
+}
+.who-we-are__titel {
+	font-size: 29.2px;
+	line-height: 1.2;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #00c0ff;
+}
+.who-we-are__text {
+	font-size: 18.8px;
+	line-height: 33px;
+	font-weight: 400;
+	color: #ffffff;
+}
+/*=====*/
+.who-we-are__bottom {
+	background-color: #1b1b1b;
+}
+.who-we-are__container-bottom {
+	display: flex;
+	justify-content: space-between;
+	padding: 130px 0px 120px 0px;
+}
+
+.who-we-are__left-column {
+	justify-content: center;
+	flex: 0 0 33.33%
+}
+.left-column__title {
+	font-size: 18.7px;
+	line-height: 33px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.left-column__text {
+}
+.who-we-are__center-column {
+}
+.center-column__title {
+}
+.center-column__text {
+}
+.who-we-are__right-column {
+}
+.right-column__title {
+}
+.right-column__text {
+}
+/*========================================================*/
+
+/*==============Подвал=======================================*/
+.footer {
+	color: #000000;
+}
